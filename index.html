@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tải Steppy</title>
+  <meta name="description" content="Steppy: đi bộ để xây căn cứ và cùng bạn hoàn thành nhiệm vụ. Bản thử nghiệm miễn phí của nhóm khởi nghiệp sinh viên.">
+  <meta property="og:title" content="Tải Steppy">
+  <meta property="og:description" content="Đi bộ để xây phố cùng bạn. Bản thử nghiệm miễn phí cho Android và iPhone.">
+  <meta property="og:image" content="https://minhngdc.github.io/steppy-download/og.jpg">
+  <meta property="og:image:width" content="600">
+  <meta property="og:image:height" content="315">
+  <meta property="og:url" content="https://minhngdc.github.io/steppy-download/">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="icon.png">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fcfaf7;
+      --card: #ffffff;
+      --ink: #302942;
+      --muted: #6b6280;
+      --plum: #5b4788;
+      --purple: #9a7fe8;
+      --lav: #e9e1fa;
+      --lav-line: #e6dcfa;
+      --mint: #dff2e8;
+      --peach: #f8e0d5;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Nunito', system-ui, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.55;
+    }
+    .wrap { max-width: 560px; margin: 0 auto; padding: 0 16px 48px; }
+    header {
+      background: linear-gradient(180deg, var(--lav) 0%, #f4effd 60%, var(--bg) 100%);
+      text-align: center;
+      padding: 28px 16px 8px;
+    }
+    header .logo { height: 54px; }
+    header .hero { width: min(100%, 360px); display: block; margin: 8px auto 0; }
+    h1 { font-size: 30px; font-weight: 900; margin: 10px 0 4px; color: var(--plum); line-height: 1.2; }
+    .tag { color: var(--muted); margin: 0 0 6px; }
+    .pilot {
+      display: inline-block;
+      background: var(--peach);
+      color: #8a4a33;
+      font-weight: 800;
+      font-size: 13px;
+      border-radius: 99px;
+      padding: 4px 12px;
+    }
+    .card {
+      background: var(--card);
+      border: 1.5px solid var(--lav-line);
+      border-radius: 22px;
+      padding: 18px;
+      margin-top: 16px;
+    }
+    .card h2 { margin: 0 0 4px; font-size: 20px; font-weight: 900; display: flex; align-items: center; gap: 8px; }
+    .card p { margin: 6px 0; }
+    .btn {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 18px;
+      border-radius: 16px;
+      padding: 15px 16px;
+      margin: 12px 0 6px;
+    }
+    .btn.primary { background: var(--plum); color: #fff; }
+    .btn.secondary { background: var(--lav); color: var(--plum); }
+    .note { font-size: 14px; color: var(--muted); }
+    ol { padding-left: 22px; margin: 8px 0; }
+    ol li { margin: 4px 0; }
+    .badge { font-size: 13px; font-weight: 800; border-radius: 99px; padding: 2px 10px; background: var(--mint); color: #2f7a55; }
+    .row { display: flex; gap: 14px; align-items: center; }
+    .qr { width: 120px; height: 120px; border-radius: 12px; border: 1.5px solid var(--lav-line); background: #fff; }
+    footer { text-align: center; font-size: 13px; color: var(--muted); margin-top: 28px; }
+    a { color: var(--plum); }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <img class="logo" src="logo.webp" alt="Steppy">
+    <h1>Đi bộ để xây phố cùng bạn</h1>
+    <p class="tag">Mỗi bước thật thành xu để xây căn cứ. Rủ một người bạn làm nhiệm vụ tuần, đi lúc nào rảnh cũng được.</p>
+    <span class="pilot">Bản thử nghiệm · miễn phí</span>
+    <img class="hero" src="duo.webp" alt="Hai nhân vật Steppy đi bộ cùng nhau">
+  </header>
+
+  <main class="wrap">
+    <section class="card" id="android">
+      <h2>Android <span class="badge">App đầy đủ</span></h2>
+      <p>Đo cả ngoài trời lẫn trong nhà (máy chạy bộ), chạy nền khi khóa màn hình.</p>
+      <a class="btn primary" href="https://github.com/minhngdc/steppy-download/releases/latest/download/Steppy.apk">Tải Steppy cho Android</a>
+      <p class="note">File APK khoảng 20–30 MB, cần Android 7 trở lên.</p>
+      <ol>
+        <li>Bấm nút trên, chờ tải xong rồi mở file <b>Steppy.apk</b>.</li>
+        <li>Nếu máy hỏi, bật <b>Cho phép cài ứng dụng từ nguồn này</b> cho trình duyệt.</li>
+        <li>Nếu Play Protect cảnh báo ứng dụng lạ, chọn <b>Chi tiết</b> rồi <b>Vẫn cài đặt</b>. Steppy chưa lên CH Play nên hệ thống chưa nhận diện.</li>
+        <li>Mở Steppy, cho phép <b>Vị trí</b> và <b>Hoạt động thể chất</b> để tính quãng đường.</li>
+      </ol>
+      <p class="note">Bản mới: tải lại từ nút này và cài đè, dữ liệu vẫn giữ.</p>
+    </section>
+
+    <section class="card" id="iphone">
+      <h2>iPhone <span class="badge">Bản web</span></h2>
+      <p>Chưa có app iPhone. Bạn dùng bản web ngay trên Safari, cùng tài khoản và đội với bạn bè dùng Android.</p>
+      <a class="btn secondary" href="https://steppy-bbce4.web.app/">Mở Steppy bản web</a>
+      <ol>
+        <li>Mở link trên bằng <b>Safari</b>.</li>
+        <li>Bấm nút <b>Chia sẻ</b> rồi chọn <b>Thêm vào MH chính</b> để có biểu tượng Steppy.</li>
+        <li>Khi đi bộ: cho phép vị trí, <b>giữ trang mở và màn hình sáng</b>. Bản web chỉ đo ngoài trời bằng GPS.</li>
+      </ol>
+    </section>
+
+    <section class="card">
+      <h2>Chia sẻ cho bạn</h2>
+      <div class="row">
+        <img class="qr" src="qr.png" alt="Mã QR tới trang tải Steppy">
+        <p>Quét mã để mở trang này, hoặc gửi link cho bạn qua Zalo, Messenger.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Dữ liệu của bạn</h2>
+      <p>Steppy dùng vị trí và bước chân chỉ để tính quãng đường đi bộ hợp lệ. Bạn có thể xóa tài khoản và dữ liệu trong mục Tài khoản của app. Steppy đang ở giai đoạn thử nghiệm của một nhóm khởi nghiệp sinh viên; tham gia là tự nguyện.</p>
+    </section>
+
+    <footer>Steppy · 2026</footer>
+  </main>
+  <script>
+    // Hiện phần phù hợp lên trước theo loại máy.
+    (function () {
+      var ua = navigator.userAgent || '';
+      var ios = /iPhone|iPad|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+      if (ios) {
+        var main = document.querySelector('main');
+        main.insertBefore(document.getElementById('iphone'), document.getElementById('android'));
+      }
+    })();
+  </script>
+</body>
+</html>
