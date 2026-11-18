@@ -114,8 +114,19 @@
     </section>
 
     <section class="card" id="iphone">
-      <h2>iPhone <span class="badge">Bản web</span></h2>
-      <p>Chưa có app iPhone. Bạn dùng bản web ngay trên Safari, cùng tài khoản và đội với bạn bè dùng Android.</p>
+      <h2>iPhone <span class="badge" id="ios-badge">Bản web</span></h2>
+      <div id="tf" class="hidden">
+        <p>App đầy đủ như bản Android, cài qua TestFlight của Apple, miễn phí.</p>
+        <a class="btn primary" id="tf-link" href="#">Cài Steppy qua TestFlight</a>
+        <ol>
+          <li>Bấm nút trên. Nếu máy chưa có TestFlight, cài TestFlight từ App Store rồi quay lại bấm nút lần nữa.</li>
+          <li>Trong TestFlight, bấm <b>Chấp nhận</b> rồi <b>Cài đặt</b>.</li>
+          <li>Mở Steppy, cho phép <b>Vị trí</b> và <b>Chuyển động &amp; thể chất</b> để tính quãng đường.</li>
+        </ol>
+        <p class="note">Khi có bản mới, TestFlight sẽ báo để bạn cập nhật.</p>
+        <p style="margin-top:14px"><b>Không muốn cài app?</b> Dùng bản web ngay trên Safari:</p>
+      </div>
+      <p id="web-only">Chưa có app iPhone. Bạn dùng bản web ngay trên Safari, cùng tài khoản và đội với bạn bè dùng Android.</p>
       <a class="btn secondary" href="https://steppy-bbce4.web.app/">Mở Steppy bản web</a>
       <ol>
         <li>Mở link trên bằng <b>Safari</b>.</li>
@@ -134,12 +145,20 @@
 
     <section class="card">
       <h2>Dữ liệu của bạn</h2>
-      <p>Steppy dùng vị trí và bước chân chỉ để tính quãng đường đi bộ hợp lệ. Bạn có thể xóa tài khoản và dữ liệu trong mục Tài khoản của app. Steppy đang ở giai đoạn thử nghiệm của một nhóm khởi nghiệp sinh viên; tham gia là tự nguyện.</p>
+      <p>Steppy dùng vị trí và bước chân chỉ để tính quãng đường đi bộ hợp lệ. Bạn có thể xóa tài khoản và dữ liệu trong mục Tài khoản của app. Steppy đang ở giai đoạn thử nghiệm của một nhóm khởi nghiệp sinh viên; tham gia là tự nguyện. Xem <a href="privacy.html">chính sách quyền riêng tư</a>.</p>
     </section>
 
-    <footer>Steppy · 2026</footer>
+    <footer>Steppy · 2026 · <a href="privacy.html">Quyền riêng tư</a></footer>
   </main>
   <script>
+    // Dán link công khai của TestFlight vào đây khi có (dạng https://testflight.apple.com/join/XXXXXXXX).
+    var TESTFLIGHT_URL = '';
+    if (TESTFLIGHT_URL) {
+      document.getElementById('tf-link').href = TESTFLIGHT_URL;
+      document.getElementById('tf').classList.remove('hidden');
+      document.getElementById('web-only').classList.add('hidden');
+      document.getElementById('ios-badge').textContent = 'App qua TestFlight';
+    }
     // Hiện phần phù hợp lên trước theo loại máy.
     (function () {
       var ua = navigator.userAgent || '';

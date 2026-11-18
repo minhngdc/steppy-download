@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chính sách quyền riêng tư · Steppy</title>
+  <meta name="description" content="Steppy thu thập dữ liệu gì, dùng để làm gì và cách xóa dữ liệu.">
+  <link rel="icon" href="icon.png">
+  <style>
+    :root { --bg: #fcfaf7; --ink: #302942; --muted: #6b6280; --plum: #5b4788; --line: #e6dcfa; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: system-ui, -apple-system, 'Segoe UI', sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; }
+    .wrap { max-width: 680px; margin: 0 auto; padding: 24px 16px 48px; }
+    h1 { color: var(--plum); font-size: 26px; line-height: 1.25; margin: 8px 0 4px; }
+    h2 { color: var(--plum); font-size: 18px; margin: 28px 0 6px; }
+    p, li { font-size: 16px; }
+    ul { padding-left: 20px; }
+    .muted { color: var(--muted); font-size: 14px; }
+    a { color: var(--plum); }
+    hr { border: 0; border-top: 1.5px solid var(--line); margin: 28px 0; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <a href="./">← Trang tải Steppy</a>
+    <h1>Chính sách quyền riêng tư</h1>
+    <p class="muted">Áp dụng cho ứng dụng Steppy trên Android, iPhone và bản web. Cập nhật ngày 18/11/2026.</p>
+
+    <p>Steppy là bản thử nghiệm của một nhóm khởi nghiệp sinh viên. Steppy biến quãng đường đi bộ thật thành xu trong game để xây căn cứ và làm nhiệm vụ cùng bạn. Trang này nói rõ Steppy thu thập gì, dùng để làm gì và bạn xóa dữ liệu ra sao.</p>
+
+    <h2>1. Dữ liệu Steppy thu thập</h2>
+    <ul>
+      <li><b>Tài khoản:</b> Steppy tạo một tài khoản ẩn danh khi bạn mở app. Nếu bạn chọn sao lưu, Steppy lưu thêm email và mật khẩu đăng nhập (mật khẩu do Firebase Authentication quản lý, nhóm không xem được).</li>
+      <li><b>Hồ sơ:</b> biệt danh trong game (không cần tên thật), bạn biết Steppy qua kênh nào, xác nhận đủ 18 tuổi và thời điểm bạn đồng ý điều khoản.</li>
+      <li><b>Kết quả buổi đi bộ:</b> quãng đường ngoài trời và trong nhà, số bước, một vài chỉ số kiểm tra tính hợp lệ (ví dụ tốc độ quá nhanh, vị trí giả lập) và thời điểm buổi đi.</li>
+      <li><b>Dữ liệu trong game:</b> xu, công trình, đội, nhiệm vụ, nhật ký đột kích và đơn mua (nếu có).</li>
+      <li><b>Sự kiện sử dụng:</b> tên các thao tác chính trong app (ví dụ hoàn tất đăng ký, mở cửa hàng) kèm thời điểm, để nhóm đo lường thử nghiệm.</li>
+      <li><b>Mã thông báo đẩy:</b> chỉ khi bạn cho phép thông báo, để báo khi bị đột kích hoặc đồng đội có hoạt động.</li>
+    </ul>
+
+    <h2>2. Vị trí và cảm biến bước chân</h2>
+    <p>Steppy chỉ dùng vị trí khi bạn bắt đầu một buổi đi bộ ngoài trời, để tính quãng đường ngay trên điện thoại. <b>Tọa độ và lộ trình không được gửi lên máy chủ</b>; máy chủ chỉ nhận con số tổng hợp như quãng đường và số bước. Số bước được đọc từ cảm biến của điện thoại (Hoạt động thể chất trên Android, Chuyển động và thể chất trên iPhone). Bạn có thể tắt các quyền này trong Cài đặt của máy bất cứ lúc nào; khi đó Steppy không đo được buổi đi.</p>
+
+    <h2>3. Mục đích sử dụng</h2>
+    <ul>
+      <li>Tính quãng đường hợp lệ, cộng xu và vận hành game, đội và nhiệm vụ.</li>
+      <li>Phát hiện gian lận đơn giản để giữ công bằng giữa người chơi.</li>
+      <li>Đo lường kết quả thử nghiệm ở dạng tổng hợp.</li>
+    </ul>
+    <p>Steppy không bán dữ liệu, không hiển thị quảng cáo và không chia sẻ dữ liệu với bên thứ ba vì mục đích quảng cáo.</p>
+
+    <h2>4. Nơi lưu trữ</h2>
+    <p>Dữ liệu được lưu trên Google Firebase (Authentication, Cloud Firestore, Cloud Functions, Cloud Messaging), máy chủ đặt tại Singapore. Google xử lý dữ liệu này với vai trò nhà cung cấp hạ tầng cho Steppy.</p>
+
+    <h2>5. Xóa tài khoản và dữ liệu</h2>
+    <p>Trong app, vào mục <b>Tài khoản</b> và chọn <b>Xóa tài khoản và dữ liệu</b>. Steppy xóa hồ sơ, dữ liệu game, sự kiện sử dụng và tài khoản đăng nhập của bạn. Đơn mua (nếu có) được giữ lại ở dạng đã bỏ tên để đối soát thanh toán; nhật ký đột kích liên quan chỉ còn ghi “Người chơi đã xóa”. Nếu bạn không mở được app, hãy liên hệ nhóm theo mục 7.</p>
+
+    <h2>6. Độ tuổi</h2>
+    <p>Steppy dành cho người từ 18 tuổi trở lên. Bạn cần xác nhận điều này khi tạo hồ sơ.</p>
+
+    <h2>7. Liên hệ</h2>
+    <p>Gửi câu hỏi hoặc yêu cầu về dữ liệu tại <a href="https://github.com/minhngdc/steppy-download/issues">trang góp ý của Steppy</a>. Nhóm sẽ phản hồi trong thời gian sớm nhất.</p>
+
+    <hr>
+    <p class="muted">Khi Steppy thay đổi cách dùng dữ liệu, nhóm cập nhật trang này và ghi lại ngày cập nhật ở đầu trang.</p>
+  </main>
+</body>
+</html>
