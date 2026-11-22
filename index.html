@@ -16,12 +16,12 @@
   <link rel="apple-touch-icon" href="icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #fcfaf7;
       --card: #ffffff;
-      --ink: #302942;
+      --ink: #433640;
       --muted: #6b6280;
       --plum: #5b4788;
       --purple: #9a7fe8;
@@ -33,7 +33,7 @@
     * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: 'Nunito', system-ui, sans-serif;
+      font-family: 'Be Vietnam Pro', system-ui, sans-serif;
       color: var(--ink);
       background: var(--bg);
       line-height: 1.55;
@@ -46,13 +46,13 @@
     }
     header .logo { height: 54px; }
     header .hero { width: min(100%, 360px); display: block; margin: 8px auto 0; }
-    h1 { font-size: 30px; font-weight: 900; margin: 10px 0 4px; color: var(--plum); line-height: 1.2; }
+    h1 { font-size: 30px; font-weight: 700; margin: 10px 0 4px; color: var(--plum); line-height: 1.2; }
     .tag { color: var(--muted); margin: 0 0 6px; }
     .pilot {
       display: inline-block;
       background: var(--peach);
       color: #8a4a33;
-      font-weight: 800;
+      font-weight: 600;
       font-size: 13px;
       border-radius: 99px;
       padding: 4px 12px;
@@ -60,28 +60,28 @@
     .card {
       background: var(--card);
       border: 1.5px solid var(--lav-line);
-      border-radius: 22px;
+      border-radius: 14px;
       padding: 18px;
       margin-top: 16px;
     }
-    .card h2 { margin: 0 0 4px; font-size: 20px; font-weight: 900; display: flex; align-items: center; gap: 8px; }
+    .card h2 { margin: 0 0 4px; font-size: 20px; font-weight: 700; display: flex; align-items: center; gap: 8px; }
     .card p { margin: 6px 0; }
     .btn {
       display: block;
       text-align: center;
       text-decoration: none;
-      font-weight: 900;
+      font-weight: 700;
       font-size: 18px;
-      border-radius: 16px;
+      border-radius: 12px;
       padding: 15px 16px;
       margin: 12px 0 6px;
     }
-    .btn.primary { background: var(--plum); color: #fff; }
+    .btn.primary { background: #ff94c5; color: #433640; }
     .btn.secondary { background: var(--lav); color: var(--plum); }
     .note { font-size: 14px; color: var(--muted); }
     ol { padding-left: 22px; margin: 8px 0; }
     ol li { margin: 4px 0; }
-    .badge { font-size: 13px; font-weight: 800; border-radius: 99px; padding: 2px 10px; background: var(--mint); color: #2f7a55; }
+    .badge { font-size: 13px; font-weight: 600; border-radius: 99px; padding: 2px 10px; background: var(--mint); color: #2f7a55; }
     .row { display: flex; gap: 14px; align-items: center; }
     .qr { width: 120px; height: 120px; border-radius: 12px; border: 1.5px solid var(--lav-line); background: #fff; }
     footer { text-align: center; font-size: 13px; color: var(--muted); margin-top: 28px; }
@@ -103,11 +103,10 @@
       <h2>Android <span class="badge">App đầy đủ</span></h2>
       <p>Đo cả ngoài trời lẫn trong nhà (máy chạy bộ), chạy nền khi khóa màn hình.</p>
       <a class="btn primary" href="https://github.com/minhngdc/steppy-download/releases/latest/download/Steppy.apk">Tải Steppy cho Android</a>
-      <p class="note">File APK khoảng 46 MB, cần Android 7 trở lên. Nên tải qua Wi-Fi.</p>
+      <p class="note">Yêu cầu Android 7 trở lên.</p>
       <ol>
         <li>Bấm nút trên, chờ tải xong rồi mở file <b>Steppy.apk</b>.</li>
         <li>Nếu máy hỏi, bật <b>Cho phép cài ứng dụng từ nguồn này</b> cho trình duyệt.</li>
-        <li>Nếu Play Protect cảnh báo ứng dụng lạ, chọn <b>Chi tiết</b> rồi <b>Vẫn cài đặt</b>. Steppy chưa lên CH Play nên hệ thống chưa nhận diện.</li>
         <li>Mở Steppy, cho phép <b>Vị trí</b> và <b>Hoạt động thể chất</b> để tính quãng đường.</li>
       </ol>
       <p class="note">Bản mới: tải lại từ nút này và cài đè, dữ liệu vẫn giữ.</p>
