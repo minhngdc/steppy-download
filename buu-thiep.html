@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Bưu thiếp tiếp sức · Steppy</title>
+  <link rel="icon" href="icon.png?v=2">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    :root { color-scheme: light; font: 100%/1.5 'Be Vietnam Pro', sans-serif; color: #433640; background: #faf8f4; }
+    body { margin: 0; }
+    main { width: min(100%, 580px); margin: 0 auto; padding: clamp(20px, 6vw, 42px) 16px; }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    header img { width: 82px; height: auto; }
+    header small, legend { color: #625769; font-weight: 500; }
+    h1 { font-size: clamp(1.6rem, 6vw, 2.25rem); line-height: 1.2; margin: 24px 0 14px; letter-spacing: -.035em; }
+    article { background: white; border: 1px solid #d8ceda; border-radius: 20px; overflow: hidden; }
+    .scene { position: relative; aspect-ratio: 780/480; overflow: hidden; background: #a8d969; isolation: isolate; }
+    .map { width: 100%; display: block; transform: translateY(-27.9%); }
+    .light { position: absolute; top: 65.2%; left: 26.2%; width: 2.4%; aspect-ratio: 1; border-radius: 50%; transform: translate(-50%, -50%); background: #fff4a7; box-shadow: 0 0 5px 3px #ffe78e, 0 0 17px 6px #ffc650; }
+    .light.linh { top: 54%; left: 75.1%; }
+    .squirrel { position: absolute; width: 17%; height: auto; bottom: 1%; left: 27%; }
+    .squirrel.linh { left: 66%; bottom: 12%; }
+    [data-both="false"] .linh { visibility: hidden; }
+    .message { margin: 0; padding: 18px 20px; font-size: 1rem; font-weight: 600; }
+    dl { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid #e6dfe7; margin: 0; padding: 14px 0; }
+    dl div { padding: 0 16px; }
+    dl div + div { border-left: 1px solid #e6dfe7; }
+    dt { font-size: .85rem; color: #67586b; }
+    dd { margin: 3px 0 0; }
+    .distance { font-weight: 700; }
+    .time { display: block; font-size: .85rem; color: #625769; }
+    fieldset { margin: 22px 0 0; padding: 0; border: 0; }
+    legend { margin-bottom: 7px; padding: 0; font-size: .9rem; }
+    .choices { display: flex; flex-wrap: wrap; gap: 8px; }
+    button { font: inherit; min-height: 44px; cursor: pointer; border: 1px solid #c5bbce; border-radius: 10px; padding: 8px 12px; background: white; color: #433640; }
+    button[aria-pressed="true"] { background: #594677; color: white; border-color: #594677; }
+    button:focus-visible { outline: 3px solid #306397; outline-offset: 3px; }
+    .print { margin-top: 12px; color: #53446f; background: transparent; border-color: transparent; text-decoration: underline; }
+    @media print {
+      :root { background: white; }
+      main { max-width: 155mm; padding: 4mm; }
+      article { break-inside: avoid; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+      fieldset, .print { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header><img src="logo.webp?v=2" alt="Steppy"><small>Mẫu thử · Số liệu minh họa</small></header>
+    <h1>Bưu thiếp tiếp sức</h1>
+    <article id="card" data-both="false">
+      <div class="scene" aria-hidden="true">
+        <img class="map" src="village.png" alt="">
+        <i class="light"></i><i class="light linh"></i>
+        <img class="squirrel" src="squirrel_boy.webp" alt="">
+        <img class="squirrel linh" src="squirrel_girl.webp" alt="">
+      </div>
+      <div aria-live="polite" aria-atomic="true">
+        <p class="message" id="message">“Linh ơi, tớ vừa đi một vòng sau giờ học. Đến lượt cậu khi rảnh nhé!”</p>
+        <dl>
+          <div><dt>An</dt><dd><span class="distance">0,62 km</span><span class="time">16:40 · 18/11</span></dd></div>
+          <div><dt>Linh</dt><dd><span class="distance" id="distance">Chờ đi tiếp</span><span class="time" id="time">Đã nhận lời mời</span></dd></div>
+        </dl>
+      </div>
+    </article>
+    <fieldset>
+      <legend>Xem bưu thiếp ở hai thời điểm</legend>
+      <div class="choices">
+        <button type="button" id="one" aria-pressed="true" aria-controls="card">Khi An vừa đi</button>
+        <button type="button" id="two" aria-pressed="false" aria-controls="card">Sau khi Linh đi tiếp</button>
+      </div>
+    </fieldset>
+    <button class="print" type="button" id="print">In bưu thiếp</button>
+  </main>
+  <script>
+    const card = document.getElementById('card');
+    const one = document.getElementById('one');
+    const two = document.getElementById('two');
+    function showBoth(both) {
+      card.dataset.both = String(both);
+      one.setAttribute('aria-pressed', String(!both));
+      two.setAttribute('aria-pressed', String(both));
+      document.getElementById('message').textContent = both
+        ? '“An ơi, tối nay tớ đi được rồi. Hai nhà mình sáng đèn rồi nè!”'
+        : '“Linh ơi, tớ vừa đi một vòng sau giờ học. Đến lượt cậu khi rảnh nhé!”';
+      document.getElementById('distance').textContent = both ? '0,48 km' : 'Chờ đi tiếp';
+      document.getElementById('time').textContent = both ? '18:10 · 19/11' : 'Đã nhận lời mời';
+    }
+    one.addEventListener('click', () => showBoth(false));
+    two.addEventListener('click', () => showBoth(true));
+    document.getElementById('print').addEventListener('click', () => window.print());
+  </script>
+</body>
+</html>
