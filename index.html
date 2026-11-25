@@ -7,13 +7,13 @@
   <meta name="description" content="Steppy: đi bộ để xây căn cứ và cùng bạn hoàn thành nhiệm vụ. Bản thử nghiệm miễn phí của nhóm khởi nghiệp sinh viên.">
   <meta property="og:title" content="Tải Steppy">
   <meta property="og:description" content="Đi bộ để xây phố cùng bạn. Bản thử nghiệm miễn phí cho Android và iPhone.">
-  <meta property="og:image" content="https://minhngdc.github.io/steppy-download/og.jpg">
-  <meta property="og:image:width" content="600">
-  <meta property="og:image:height" content="315">
+  <meta property="og:image" content="https://minhngdc.github.io/steppy-download/icon.png?v=2">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
   <meta property="og:url" content="https://minhngdc.github.io/steppy-download/">
   <meta property="og:type" content="website">
-  <link rel="icon" href="icon.png">
-  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="icon" href="icon.png?v=2">
+  <link rel="apple-touch-icon" href="icon.png?v=2">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -45,7 +45,8 @@
       padding: 28px 16px 8px;
     }
     header .logo { height: 54px; }
-    header .hero { width: min(100%, 360px); display: block; margin: 8px auto 0; }
+    header .hero { display: flex; justify-content: center; align-items: end; margin: 8px auto 0; }
+    header .hero img { width: min(34vw, 130px); height: auto; }
     h1 { font-size: 30px; font-weight: 700; margin: 10px 0 4px; color: var(--plum); line-height: 1.2; }
     .tag { color: var(--muted); margin: 0 0 6px; }
     .pilot {
@@ -91,11 +92,11 @@
 </head>
 <body>
   <header>
-    <img class="logo" src="logo.webp" alt="Steppy">
+    <img class="logo" src="logo.webp?v=2" alt="Steppy">
     <h1>Đi bộ để xây phố cùng bạn</h1>
-    <p class="tag">Mỗi bước thật thành xu để xây căn cứ. Rủ một người bạn làm nhiệm vụ tuần, đi lúc nào rảnh cũng được.</p>
-    <span class="pilot">Bản thử nghiệm · miễn phí</span>
-    <img class="hero" src="duo.webp" alt="Hai nhân vật Steppy đi bộ cùng nhau">
+    <p class="tag">Đi một vòng để nhận xu, xây căn cứ và kiếm lượt đột kích. Rủ một người bạn làm nhiệm vụ tuần, mỗi người đi lúc mình rảnh.</p>
+    <span class="pilot">Đi bộ và chơi đội hai người miễn phí</span>
+    <div class="hero" aria-hidden="true"><img src="squirrel_boy.webp" alt=""><img src="squirrel_girl.webp" alt=""></div>
   </header>
 
   <main class="wrap">
